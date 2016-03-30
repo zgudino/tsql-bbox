@@ -1,8 +1,14 @@
 # bbox-synctasks
 > Conjunto T-SQL de integracion (entrada/salida) entre Sap® y BarcodeBox
 
+## Recomendaciones
+* [SQL Style Guide](http://www.sqlstyle.guide/) por __Simon Holywell__ guia de estilo SQL empleado para cada uno de nuestros fuentes.
+* Extension [SqlBeautifier](https://github.com/zsong/SqlBeautifier) para editor [Sublime Text](https://www.sublimetext.com/), nos facilito formatear nuestros fuentes.
 
-## License
+## Creditos
+* Eduardo Olivaren - Autor original
+
+## Licencia
 Copyright (c) 2016 TARGET S.A. Licensiado bajo Apache License Version 2.0
 
 #### Condiciones
