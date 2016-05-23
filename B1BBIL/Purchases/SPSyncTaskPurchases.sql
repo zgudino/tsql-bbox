@@ -37,11 +37,13 @@ AS
         LEFT JOIN
             (SELECT DISTINCT docId ,
                              invPartNum ,
+                             itmERPRefId,
                              itmPrice ,
                              itmQty1
              FROM BBIL.dbo.BILDocumentItems
              WHERE docKind = 'PO') D1 ON D1.docId = T1.docRelatedTo
         AND D1.invPartNum = T2.invPartNum
+        AND D1.itmERPRefId = T2.itmERPRefId
         WHERE T1.docKind = 'PO'
             AND T1.docStatus = 'CLOSED'
             AND T1.docNum NOT IN
