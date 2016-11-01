@@ -7,7 +7,7 @@
 
 ## Creditos
 * Simon Holywell - Autor de __SQL Style Guide__
-* Eduardo Olivaren - Autor original SPs en B1BBIl
+* Eduardo Olivaren - Autor original SPs en B1BBIL
 
 ## Licencia
 Copyright (c) 2016 TARGET S.A. Licensiado bajo Apache License Version 2.0
