@@ -57,13 +57,16 @@ BEGIN TRY
 /*
     18/04/2013
     + Transacciones "eliminar" ahora se inserta el regitro en vez de actualizar campos previo.
+
+    11/11/2016
+    + Modifico referencia de BBIL a BB01 por solicitud https://gitlab.com/zahir_gudino/bbox-synctasks/issues/3
 */
 
 IF @transType IN ('U', 'D')
 BEGIN
     IF (
         SELECT MAX(invPartNum)
-        FROM [BBIL].dbo.BILInventoryParts
+        FROM [BB01].dbo.Inventory
         WHERE invPartNum = @itemCode
     ) IS NOT NULL
     BEGIN
@@ -79,7 +82,7 @@ BEGIN
             @bilSynced = 0,
             @invSerialized = 0,
             @invERPFamilyCode = invERPFamilyCode
-        FROM [BBIL].dbo.BILInventoryParts
+        FROM [BB01].dbo.Inventory
         WHERE invPartNum = ' + QUOTENAME(@itemCode, '''') + '
 
         INSERT INTO [BBIL].dbo.BILInventoryParts (
@@ -128,7 +131,7 @@ BEGIN
                 @rowLastUpd,
                 @rowUpdBy,
                 @bilSynced
-            FROM [BBIL].dbo.BILBarcodes
+            FROM [BB01].dbo.barCodes
             WHERE invPartNum = ' + QUOTENAME(@itemCode, '''')  + '
                 AND rowStatus = ''A''
         )
