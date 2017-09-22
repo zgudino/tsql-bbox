@@ -1,4 +1,4 @@
-# bbox
+# BarcodeBox Integration Tasks Runner
 > Conjunto T-SQL de integracion (entrada/salida) entre Sap® y BarcodeBox
 
 ## Recomendaciones
